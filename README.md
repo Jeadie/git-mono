@@ -4,18 +4,18 @@ A tool for monorepo people in a multi-repo world
 ## Introduction
 Suppose you love monorepos, but you join a company only to find they use three separate git repositories!
 
-```shell
->>> monogit repo_a repo_b repo_c
+```console
+mono@git:~$ monogit repo_a repo_b repo_c
 
->>> git add repo_a/main.rs
->>> git add repo_b/docs/src/index.md
->>> git add repo_c/python/client.py
+mono@git:~$ git add repo_a/main.rs
+mono@git:~$ git add repo_b/docs/src/index.md
+mono@git:~$ git add repo_c/python/client.py
 ```
 
 
 Just use regular git
-```shell
->>> git commit -m "add new feature with docs and SDK change"
+```console
+mono@git:~$ git commit -m "add new feature with docs and SDK change"
 [repo_a main 456def7] add new feature with docs and SDK change
  1 file changed, 15 insertions(+)
 
@@ -27,8 +27,8 @@ Just use regular git
 ```
 
 `monogit` will help track across repositories (for your colleagues who don't use monogit).
-```shell
->>> /usr/bin/git --git-dir repo_a/.git log
+```console
+mono@git:~$ /usr/bin/git --git-dir repo_a/.git log
 commit 456def7805b6eb5018c6a2528d2bfa85210b5ca3
 Author: jeadie <jackeadie@duck.com>
 Date:   Fri Dec 6 16:39:45 2024 +1000
@@ -43,8 +43,8 @@ Date:   Fri Dec 6 16:39:45 2024 +1000
 ```
 
 And push to all repositories at once
-```shell
->>> git push
+```console
+mono@git:~$ git push
 Starting multi-repo push...
 repo_a:
    ✔ Updated 123abc4 → 456def7 (1 object, 150 bytes)
