@@ -26,7 +26,7 @@ mono@git:~$ git commit -m "add new feature with docs and SDK change"
  1 file changed, 20 insertions(+)
 ```
 
-`monogit` will help track across repositories (for your colleagues who don't use monogit).
+Automaticate linking between repositories
 ```console
 mono@git:~$ /usr/bin/git --git-dir repo_a/.git log
 commit 456def7805b6eb5018c6a2528d2bfa85210b5ca3
